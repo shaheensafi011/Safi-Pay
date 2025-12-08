@@ -1,0 +1,853 @@
+/* تنظیمات پایه برای خوانایی بهتر در زبان فارسی و استایل‌دهی عمومی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap');
+/* استفاده از فونت Vazirmatn برای زیبایی و خوانایی بهتر فارسی */
+
+:root {
+    /* متغیرهای رنگی برند SafiPay */
+    --color-black: #0D0D0D; /* مشکی تیره برای پس‌زمینه */
+    --color-gold: #FFD700; /* طلایی براق برای نقاط قوت */
+    --color-light-gold: #FFEB8E; /* طلایی روشن برای هاور */
+    --color-white: #F9F9F9; /* سفید روشن برای متن‌های اصلی */
+    --color-gray: #AAAAAA; /* خاکستری برای متن‌های فرعی */
+
+    /* متغیرهای فاصله و اندازه */
+    --spacing-lg: 4rem;
+    --spacing-md: 2rem;
+    --spacing-sm: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--color-black); /* پس‌زمینه اصلی مشکی */
+    color: var(--color-white); /* رنگ متن اصلی سفید */
+    direction: rtl; /* جهت‌دهی راست به چپ برای فارسی */
+    line-height: 1.6;
+}
+
+/* کلاس‌های عمومی برای استفاده مجدد */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.dark-background {
+    background-color: var(--color-black);
+}
+
+.gold-text {
+    color: var(--color-gold);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-gold); /* عناوین اصلی به رنگ طلایی */
+}
+
+.section-description {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md) auto;
+    color: var(--color-gray);
+}
+
+/* ======================= */
+/* استایل‌های هدر و ناوبری */
+/* ======================= */
+
+.main-header {
+    background-color: rgba(13, 13, 13, 0.95); /* مشکی نیمه شفاف */
+    padding: var(--spacing-sm) 0;
+    border-bottom: 2px solid var(--color-gold); /* خط طلایی پایین هدر */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; /* اندازه لوگو */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-right: var(--spacing-md);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.active-link {
+    color: var(--color-gold);
+    border-bottom: 3px solid var(--color-gold);
+}
+
+
+/* ======================= */
+/* استایل‌های دکمه CTA (فراخوان به عمل) */
+/* ======================= */
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: var(--spacing-md);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.gold-button {
+    background-color: var(--color-gold);
+    color: var(--color-black); /* متن مشکی روی دکمه طلایی */
+    border: 2px solid var(--color-gold);
+}
+
+.gold-button:hover {
+    background-color: var(--color-light-gold);
+    transform: scale(1.05); /* انیمیشن کوچک هنگام هاور */
+}
+
+/* ======================= */
+/* استایل‌های بخش قهرمان (Hero Section) */
+/* ======================= */
+
+.hero-section {
+    text-align: center;
+    padding: var(--spacing-lg) 0 6rem 0; /* فاصله زیاد برای جلب توجه */
+    min-height: 80vh; /* حداقل ارتفاع صفحه */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    color: var(--color-gray);
+}
+
+/* ======================= */
+/* استایل‌های بخش مشکل و راه‌حل */
+/* ======================= */
+
+.problem-section, .solution-section {
+    padding: var(--spacing-lg) 0;
+}
+
+.problem-list {
+    list-style: none;
+    max-width: 700px;
+    margin: var(--spacing-md) auto;
+}
+
+.problem-list li {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid #222;
+    font-size: 1.1rem;
+}
+
+.problem-list li::before {
+    content: "❌"; /* استفاده از آیکون برای لیست مشکل */
+    margin-left: 0.8rem;
+    color: var(--color-gold); 
+}
+
+.solution-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.feature-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-top: 3px solid var(--color-gold); /* خط طلایی بالا برای تاکید */
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    flex-basis: 30%; /* اندازه کارت‌ها در صفحه دسکتاپ */
+    min-width: 280px;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--color-gold);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ======================= */
+/* استایل‌های فوتر (Footer) */
+/* ======================= */
+
+.main-footer {
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    margin-right: var(--spacing-md);
+}
+
+/* تنظیمات برای ریسپانسیو بودن موبایل */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        padding-top: var(--spacing-sm);
+    }
+    .main-nav ul li {
+        margin: 0 var(--spacing-sm);
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .feature-card {
+        flex-basis: 100%;
+        margin-bottom: var(--spacing-md);
+    }
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        margin-top: var(--spacing-sm);
+    }
+}
+/* اضافه کردن به انتهای style.css */
+
+.investment-ask-content .ask-box {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 3px solid var(--color-gold);
+    max-width: 600px;
+    margin: 3rem auto;
+    border-radius: 10px;
+}
+
+.investment-ask-content .ask-box h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.investment-ask-content .ask-box p {
+    font-size: 1.2rem;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    color: var(--color-white);
+}
+
+.fund-allocation-list {
+    list-style: none;
+    max-width: 500px;
+    margin: var(--spacing-md) auto;
+}
+
+.fund-allocation-list li {
+    background-color: #1a1a1a;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-right: 5px solid var(--color-gold);
+    font-size: 1.1rem;
+}
+
+/* استایل‌دهی جدول پیش‌بینی درآمد */
+.forecast-table {
+    width: 80%;
+    margin: var(--spacing-lg) auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.forecast-table th, .forecast-table td {
+    border: 1px solid #333;
+    padding: 1rem;
+}
+
+.forecast-table th {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    font-weight: 900;
+}
+
+.forecast-table td {
+    background-color: #1a1a1a;
+    color: var(--color-white);
+}
+/* اضافه کردن به انتهای style.css */
+
+/* استایل‌های بخش تیم (About Page) */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+    text-align: center;
+}
+
+.member-card {
+    flex-basis: 40%; /* بزرگتر شدن کارت‌ها برای نمایش اطلاعات تیم */
+    border: 1px solid #333;
+    padding: var(--spacing-lg);
+    min-width: 300px;
+}
+
+.member-card h4 {
+    color: var(--color-gray);
+    font-weight: 400;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.compliance-details ul {
+    list-style: none;
+    max-width: 700px;
+    margin: var(--spacing-md) auto;
+}
+
+.compliance-details li {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid #222;
+    font-size: 1.1rem;
+}
+
+.compliance-details li::before {
+    content: "✅"; /* آیکون تایید */
+    margin-left: 0.8rem;
+}
+
+.mission-details h3 {
+    margin-top: var(--spacing-md);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.mission-details p {
+    text-align: justify;
+    max-width: 800px;
+    margin: 0.5rem auto 1.5rem auto;
+    font-size: 1.1rem;
+}
+/* اضافه کردن به انتهای style.css */
+
+/* استایل‌های صفحه تماس (Contact Page) */
+.contact-info-section {
+    padding-top: var(--spacing-lg);
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+
+.contact-form-area {
+    flex-basis: 45%;
+    min-width: 350px;
+    background-color: #1a1a1a;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 3px solid var(--color-gold);
+}
+
+.direct-contact-area {
+    flex-basis: 45%;
+    min-width: 350px;
+    padding: var(--spacing-md);
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: right;
+}
+
+.contact-form .form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333;
+    background-color: #000;
+    color: var(--color-white);
+    border-radius: 4px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+}
+
+.submit-button {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact-card {
+    background-color: #1a1a1a;
+    border-right: 5px solid var(--color-gold);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 4px;
+}
+
+.contact-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-card ul {
+    list-style: none;
+    padding-top: 0.5rem;
+}
+
+.contact-link {
+    color: var(--color-light-gold);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--color-gold);
+    text-decoration: underline;
+}
+
+/* ریسپانسیو کردن grid در موبایل */
+@media (max-width: 768px) {
+    .contact-form-area, .direct-contact-area {
+        flex-basis: 100%;
+    }
+}
+/* اضافه شدن به style.css برای مدیریت دکمه زبان */
+.main-header .container {
+    /* اضافه کردن فضای بیشتر برای دکمه زبان */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* برای موقعیت دهی مطلق دکمه زبان */
+}
+
+.language-switch {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    margin-left: 1rem; /* فاصله از لوگو */
+    transition: background-color 0.3s;
+}
+
+.language-switch:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black) !important;
+}
+
+/* برای فارسی که dir="rtl" دارد، دکمه باید در سمت چپ قرار گیرد */
+html[dir="rtl"] .main-header .container {
+    /* در طرح RTL، دکمه زبان سمت چپ و بقیه سمت راست قرار می‌گیرد */
+    flex-direction: row-reverse; 
+}
+/* در طرح انگلیسی dir="ltr" است، دکمه زبان سمت راست قرار می‌گیرد */
+html[dir="ltr"] .main-header .container {
+     flex-direction: row; 
+}
+/* تنظیمات پایه برای خوانایی بهتر در زبان فارسی و استایل‌دهی عمومی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap');
+/* استفاده از فونت Vazirmatn برای زیبایی و خوانایی بهتر فارسی */
+
+:root {
+    /* متغیرهای رنگی برند SafiPay */
+    --color-black: #0D0D0D; 
+    --color-gold: #FFD700; 
+    --color-light-gold: #FFEB8E;
+    --color-white: #F9F9F9;
+    --color-gray: #AAAAAA;
+
+    /* متغیرهای فاصله و اندازه */
+    --spacing-lg: 4rem;
+    --spacing-md: 2rem;
+    --spacing-sm: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-black); 
+    color: var(--color-white); 
+    line-height: 1.6;
+}
+
+/* فونت و جهت‌دهی بر اساس زبان (با استفاده از تگ HTML) */
+html[lang="fa"] body {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl; 
+}
+html[lang="en"] body {
+    font-family: 'Arial', sans-serif; /* فونت ساده‌تر برای انگلیسی */
+    direction: ltr;
+}
+
+
+/* کلاس‌های عمومی برای استفاده مجدد */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.dark-background {
+    background-color: var(--color-black);
+}
+
+.gold-text {
+    color: var(--color-gold);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-gold); 
+}
+
+/* ======================= */
+/* استایل‌های هدر و ناوبری */
+/* ======================= */
+
+.main-header {
+    background-color: rgba(13, 13, 13, 0.95); 
+    padding: var(--spacing-sm) 0;
+    border-bottom: 2px solid var(--color-gold); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-img {
+    height: 40px; 
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.active-link {
+    color: var(--color-gold);
+    border-bottom: 3px solid var(--color-gold);
+}
+
+/* دکمه تغییر زبان */
+.language-switch {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--color-gold);
+    border-radius: 4px;
+    margin: 0 1rem;
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.language-switch:hover {
+    background-color: var(--color-gold);
+    color: var(--color-black) !important;
+}
+
+/* ======================= */
+/* استایل‌های دکمه و CTA */
+/* ======================= */
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: var(--spacing-md);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.gold-button {
+    background-color: var(--color-gold);
+    color: var(--color-black); 
+    border: 2px solid var(--color-gold);
+}
+
+.gold-button:hover {
+    background-color: var(--color-light-gold);
+    transform: scale(1.05); 
+}
+
+/* ======================= */
+/* استایل‌های اصلی صفحات (Hero, Problem, Solution, Footer) */
+/* ======================= */
+
+.hero-section {
+    text-align: center;
+    padding: var(--spacing-lg) 0 6rem 0; 
+    min-height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.2;
+}
+
+/* ... (ادامه استایل‌های قبلی برای Problem, Solution, Footer, Team, Contact, Table) ... */
+
+/* استایل‌های Problem List */
+.problem-list {
+    list-style: none;
+    max-width: 700px;
+    margin: var(--spacing-md) auto;
+}
+.problem-list li {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid #222;
+    font-size: 1.1rem;
+}
+html[dir="rtl"] .problem-list li::before {
+    content: "❌"; /* استفاده از آیکون برای لیست مشکل در فارسی */
+    margin-left: 0.8rem;
+    color: var(--color-gold); 
+}
+html[dir="ltr"] .problem-list li::before {
+    content: "❌"; /* استفاده از آیکون برای لیست مشکل در انگلیسی */
+    margin-right: 0.8rem;
+    color: var(--color-gold); 
+}
+
+/* استایل‌های Solution Features */
+.solution-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+.feature-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-top: 3px solid var(--color-gold); 
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    flex-basis: 30%;
+    min-width: 280px;
+    transition: transform 0.3s;
+}
+
+/* استایل‌های Investment Ask */
+.investment-ask-content .ask-box {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 3px solid var(--color-gold);
+    max-width: 600px;
+    margin: 3rem auto;
+    border-radius: 10px;
+}
+.fund-allocation-list {
+    list-style: none;
+    max-width: 500px;
+    margin: var(--spacing-md) auto;
+}
+.fund-allocation-list li {
+    background-color: #1a1a1a;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border-right: 5px solid var(--color-gold);
+    font-size: 1.1rem;
+}
+html[dir="ltr"] .fund-allocation-list li {
+    border-left: 5px solid var(--color-gold); /* در انگلیسی border سمت چپ */
+    border-right: none;
+}
+
+/* استایل‌های جدول (Forecast Table) */
+.forecast-table {
+    width: 80%;
+    margin: var(--spacing-lg) auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.forecast-table th, .forecast-table td {
+    border: 1px solid #333;
+    padding: 1rem;
+}
+.forecast-table th {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    font-weight: 900;
+}
+
+/* استایل‌های فوتر */
+.main-footer {
+    padding: var(--spacing-md) 0;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+}
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ... (سایر استایل‌های تماس و رسپانسیو) ... */
+
+/* استایل‌های تماس */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin-top: var(--spacing-md);
+}
+.contact-form-area {
+    flex-basis: 45%;
+    min-width: 350px;
+    background-color: #1a1a1a;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border-top: 3px solid var(--color-gold);
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #333;
+    background-color: #000;
+    color: var(--color-white);
+    border-radius: 4px;
+    font-family: inherit; /* برای حفظ فونت Vazirmatn در فارسی */
+    font-size: 1rem;
+}
+
+/* @media (max-width: 768px) { ... } */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        padding-top: var(--spacing-sm);
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .feature-card {
+        flex-basis: 100%;
+    }
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-form-area, .direct-contact-area {
+        flex-basis: 100%;
+    }
+}
