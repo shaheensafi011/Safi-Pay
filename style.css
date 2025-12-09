@@ -851,3 +851,26 @@ html[dir="ltr"] .fund-allocation-list li {
         flex-basis: 100%;
     }
 }
+/* @media (max-width: 768px) { ... } */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        padding-top: var(--spacing-sm);
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .feature-card {
+        flex-basis: 100%;
+    }
+    .main-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-form-area, .direct-contact-area {
+        flex-basis: 100%;
+    }
+}
+
