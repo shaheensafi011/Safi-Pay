@@ -1,34 +1,14 @@
-// SafiPay Script.js
-// Basic animations and interactions
+document.addEventListener('DOMContentLoaded', function() {
+    // انتخاب دکمه و منو بر اساس کلاس و ID که در HTML تعریف کردیم
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('#main-nav-menu'); 
 
-// Smooth scroll for navigation links
-const links = document.querySelectorAll('nav ul li a');
-
-links.forEach(link => {
-  link.addEventListener('click', e => {
-    if (link.hash) {
-      e.preventDefault();
-      const target = document.querySelector(link.hash);
-      target.scrollIntoView({ behavior: 'smooth' });
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+            // نمایش/مخفی کردن منو
+            navMenu.classList.toggle('active');
+            // تغییر آیکون همبرگر به ضربدر (X)
+            menuToggle.classList.toggle('is-open'); 
+        });
     }
-  });
-});
-
-// Fade-in effect for sections
-const sections = document.querySelectorAll('.section');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.3 });
-
-sections.forEach(sec => {
-  sec.style.opacity = '0';
-  sec.style.transform = 'translateY(40px)';
-  sec.style.transition = '1s ease';
-  observer.observe(sec);
 });
